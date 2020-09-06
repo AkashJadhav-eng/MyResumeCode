@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Resume290820Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Details">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="EmailId" Type="nvarchar(max)" />
+          <Property Name="ContactNumber" Type="nvarchar(max)" />
+          <Property Name="CAREEROBJECTIVE" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Graduation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Qualification" Type="nvarchar" MaxLength="50" />
+          <Property Name="University" Type="nvarchar" MaxLength="50" />
+          <Property Name="Percentage" Type="nvarchar" MaxLength="50" />
+          <Property Name="YearOfPassing" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HSC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Qualification" Type="nvarchar" MaxLength="50" />
+          <Property Name="University" Type="nvarchar" MaxLength="50" />
+          <Property Name="Percentage" Type="nvarchar" MaxLength="50" />
+          <Property Name="YearOfPassing" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PersonalDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar(max)" />
+          <Property Name="DOB" Type="nvarchar(max)" />
+          <Property Name="PermanentAddress" Type="nvarchar(max)" />
+          <Property Name="LanguagesKnown" Type="nvarchar(max)" />
+          <Property Name="Hobbies" Type="nvarchar(max)" />
+          <Property Name="DECLARATION" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="SSC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Qualification" Type="nvarchar" MaxLength="50" />
+          <Property Name="University" Type="nvarchar" MaxLength="50" />
+          <Property Name="Percentage" Type="nvarchar" MaxLength="50" />
+          <Property Name="YearOfPassing" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TechnicalSkills">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Certification" Type="nvarchar(max)" />
+          <Property Name="ProgrammingLanguage" Type="nvarchar" MaxLength="50" />
+          <Property Name="DataBaseUsed" Type="nvarchar" MaxLength="50" />
+          <Property Name="FrameworkUsed" Type="nvarchar" MaxLength="50" />
+          <Property Name="OperatingSystem" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Resume290820ModelStoreContainer">
+          <EntitySet Name="Details" EntityType="Self.Details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Graduation" EntityType="Self.Graduation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HSC" EntityType="Self.HSC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonalDetails" EntityType="Self.PersonalDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SSC" EntityType="Self.SSC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TechnicalSkills" EntityType="Self.TechnicalSkills" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Resume290820Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Detail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmailId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CAREEROBJECTIVE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Graduation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="University" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Percentage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YearOfPassing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HSC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="University" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Percentage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YearOfPassing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PersonalDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PermanentAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LanguagesKnown" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hobbies" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DECLARATION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SSC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="University" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Percentage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YearOfPassing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TechnicalSkill">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Certification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProgrammingLanguage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DataBaseUsed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FrameworkUsed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OperatingSystem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Resume290820Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Details" EntityType="Self.Detail" />
+          <EntitySet Name="Graduations" EntityType="Self.Graduation" />
+          <EntitySet Name="HSCs" EntityType="Self.HSC" />
+          <EntitySet Name="PersonalDetails" EntityType="Self.PersonalDetail" />
+          <EntitySet Name="Projects" EntityType="Self.Project" />
+          <EntitySet Name="SSCs" EntityType="Self.SSC" />
+          <EntitySet Name="TechnicalSkills" EntityType="Self.TechnicalSkill" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Resume290820ModelStoreContainer" CdmEntityContainer="Resume290820Entities1">
+          <EntitySetMapping Name="Details">
+            <EntityTypeMapping TypeName="Resume290820Model.Detail">
+              <MappingFragment StoreEntitySet="Details">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="CAREEROBJECTIVE" ColumnName="CAREEROBJECTIVE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Graduations">
+            <EntityTypeMapping TypeName="Resume290820Model.Graduation">
+              <MappingFragment StoreEntitySet="Graduation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+                <ScalarProperty Name="University" ColumnName="University" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="YearOfPassing" ColumnName="YearOfPassing" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HSCs">
+            <EntityTypeMapping TypeName="Resume290820Model.HSC">
+              <MappingFragment StoreEntitySet="HSC">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+                <ScalarProperty Name="University" ColumnName="University" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="YearOfPassing" ColumnName="YearOfPassing" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonalDetails">
+            <EntityTypeMapping TypeName="Resume290820Model.PersonalDetail">
+              <MappingFragment StoreEntitySet="PersonalDetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+                <ScalarProperty Name="LanguagesKnown" ColumnName="LanguagesKnown" />
+                <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+                <ScalarProperty Name="DECLARATION" ColumnName="DECLARATION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="Resume290820Model.Project">
+              <MappingFragment StoreEntitySet="Project">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SSCs">
+            <EntityTypeMapping TypeName="Resume290820Model.SSC">
+              <MappingFragment StoreEntitySet="SSC">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+                <ScalarProperty Name="University" ColumnName="University" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="YearOfPassing" ColumnName="YearOfPassing" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TechnicalSkills">
+            <EntityTypeMapping TypeName="Resume290820Model.TechnicalSkill">
+              <MappingFragment StoreEntitySet="TechnicalSkills">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Certification" ColumnName="Certification" />
+                <ScalarProperty Name="ProgrammingLanguage" ColumnName="ProgrammingLanguage" />
+                <ScalarProperty Name="DataBaseUsed" ColumnName="DataBaseUsed" />
+                <ScalarProperty Name="FrameworkUsed" ColumnName="FrameworkUsed" />
+                <ScalarProperty Name="OperatingSystem" ColumnName="OperatingSystem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
